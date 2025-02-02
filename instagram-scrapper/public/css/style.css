@@ -1,0 +1,255 @@
+/* General Styles */
+:root {
+    --primary-color: #405DE6;
+    --secondary-color: #5B51D8;
+    --gradient-start: #833AB4;
+    --gradient-middle: #FD1D1D;
+    --gradient-end: #F77737;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(45deg, #1a1a1a, #363636);
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 8s ease infinite;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F77737, #FCAF45);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-white-90 {
+    opacity: 0.9;
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+.feature-icon i {
+    font-size: 2.5rem;
+}
+
+.bg-primary-soft {
+    background-color: rgba(64, 93, 230, 0.1);
+    color: var(--primary-color);
+}
+
+.bg-success-soft {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.bg-info-soft {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: #17a2b8;
+}
+
+/* Step Cards */
+.step-card {
+    padding: 2rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-gradient-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gradient-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(64, 93, 230, 0.3);
+    color: white;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg, #1a1a1a, #363636);
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Dashboard specific styles */
+.stat-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-image {
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .step-card {
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Profile Stats */
+.profile-stats {
+    transition: transform 0.2s;
+}
+
+.profile-stats:hover {
+    transform: translateY(-5px);
+}
+
+/* Bootstrap Icons */
+.bi {
+    line-height: 1;
+}
+
+/* Buttons */
+.btn-primary {
+    border-radius: 25px;
+    padding: 10px 30px;
+}

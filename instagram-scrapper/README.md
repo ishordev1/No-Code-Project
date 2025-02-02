@@ -2,6 +2,8 @@
 
 A web application that allows users to analyze Instagram profiles by displaying followers count, total posts, and other profile information.
 
+![website image](img1.png)
+![website image](img2.png)
 ## Features
 - View Instagram profile information
 - Display follower count
